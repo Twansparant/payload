@@ -12,6 +12,12 @@ export const PostsCollection: CollectionConfig = {
       name: 'title',
       type: 'text',
     },
+    {
+      name: 'polymorphic',
+      type: 'relationship',
+      relationTo: ['pages', 'products'],
+      hasMany: true,
+    },
   ],
   versions: {
     drafts: true,
